@@ -27,12 +27,6 @@ class DumpList {
         .add(Dump('title4', 'content4', Level.easy, Icons.audiotrack_outlined));
     dumplist
         .add(Dump('title4', 'content4', Level.easy, Icons.audiotrack_outlined));
-    dumplist
-        .add(Dump('title4', 'content4', Level.easy, Icons.audiotrack_outlined));
-    dumplist
-        .add(Dump('title4', 'content4', Level.easy, Icons.audiotrack_outlined));
-    dumplist
-        .add(Dump('title4', 'content4', Level.easy, Icons.audiotrack_outlined));
   }
 }
 
