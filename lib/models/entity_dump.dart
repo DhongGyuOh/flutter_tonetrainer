@@ -19,17 +19,5 @@ class DumpList {
     dumplist.add(Dump('title3', 'content3', Level.hard, Icons.adb_rounded));
     dumplist
         .add(Dump('title4', 'content4', Level.easy, Icons.audiotrack_outlined));
-    dumplist
-        .add(Dump('title4', 'content4', Level.easy, Icons.audiotrack_outlined));
-    dumplist
-        .add(Dump('title4', 'content4', Level.easy, Icons.audiotrack_outlined));
-    dumplist
-        .add(Dump('title4', 'content4', Level.easy, Icons.audiotrack_outlined));
-    dumplist
-        .add(Dump('title4', 'content4', Level.easy, Icons.audiotrack_outlined));
   }
 }
-
-
-//API로 주고 받아야하는 것들:   완료 시간, 사용자 닉네임, 랭킹
-//소스에 추가해도 되는 것들:    문제들, 기본 Entity들

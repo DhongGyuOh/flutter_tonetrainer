@@ -28,11 +28,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int selectedIndex = 0;
-  final List<Widget> pages = [
-    PageDump(),
-    const PageTheory(),
-    const PageReward()
-  ];
+  final List<Widget> pages = [PageDump(), PageTheory(), const PageReward()];
   void btnClick(int index) {
     setState(() {
       selectedIndex = index;
