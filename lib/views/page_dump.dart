@@ -43,7 +43,7 @@ class PageDump extends StatelessWidget {
                   tag: dumpl.title,
                   child: Container(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 80, vertical: 80),
+                        horizontal: 40, vertical: 30),
                     decoration: BoxDecoration(
                         color: Colors.amber.shade800,
                         borderRadius:
@@ -74,10 +74,16 @@ class PageDump extends StatelessWidget {
                               style: const TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 30),
                             ),
+                          ],
+                        ),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
                             Text(
                               dumpl.content,
                               style: const TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 25),
+                                  fontWeight: FontWeight.bold, fontSize: 12),
                             )
                           ],
                         )

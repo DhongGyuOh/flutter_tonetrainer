@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tonetrainer/models/entity_dump.dart';
+import 'package:piano/piano.dart';
 
 class PageChord extends StatelessWidget {
   final String title, content;
@@ -15,50 +16,41 @@ class PageChord extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        heightFactor: 20,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 230),
-          child: Hero(
-            tag: title,
-            child: Container(
-              decoration: const BoxDecoration(
-                  color: Colors.blueGrey,
-                  borderRadius: BorderRadius.all(Radius.elliptical(20, 20))),
-              padding: const EdgeInsets.symmetric(horizontal: 80, vertical: 80),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Icon(
-                        iconData,
-                        size: 30,
-                      ),
-                      Text(title,
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 30)),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(level.name,
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 30)),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      Text(content,
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 30))
-                    ],
-                  )
-                ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Hero(
+              tag: title,
+              child: Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                decoration: BoxDecoration(
+                    color: Colors.amber.shade800,
+                    borderRadius:
+                        const BorderRadius.all(Radius.elliptical(20, 20))),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      iconData,
+                      size: 40,
+                    ),
+                    Text(
+                      title,
+                      style: const TextStyle(
+                          fontSize: 40, fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
               ),
             ),
-          ),
+            Container(
+                decoration: BoxDecoration(color: Colors.lightGreen.shade700),
+                width: 400,
+                height: 200,
+                child: InteractivePiano(
+                    noteRange: NoteRange.forClefs([Clef.Treble])))
+          ],
         ),
       ),
     );
