@@ -12,9 +12,10 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   firebase_core: ^2.8.0
-  piano: ^1.0.3+1
   card_swiper: ^2.0.4
   lottie: ^2.3.2
+  piano: ^1.0.3+1
+  chat_gpt_sdk: ^2.1.1
 
 dev_dependencies:
   flutter_test:

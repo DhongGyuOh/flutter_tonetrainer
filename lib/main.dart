@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tonetrainer/views/page_chatgpt.dart';
 import 'package:flutter_tonetrainer/views/page_dump.dart';
 import 'package:flutter_tonetrainer/views/page_reward.dart';
 import 'package:flutter_tonetrainer/views/page_theory.dart';
@@ -28,7 +29,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int selectedIndex = 0;
-  final List<Widget> pages = [PageDump(), PageTheory(), const PageReward()];
+  final List<Widget> pages = [
+    PageDump(),
+    PageTheory(),
+    const PageReward(),
+    const PageChatGPT()
+  ];
   void btnClick(int index) {
     setState(() {
       selectedIndex = index;
@@ -41,11 +47,15 @@ class _HomePageState extends State<HomePage> {
       body: pages[selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 30,
+        fixedColor: Colors.deepPurpleAccent.shade700,
+        unselectedItemColor: Colors.black87,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.list), label: 'Dump'),
           BottomNavigationBarItem(icon: Icon(Icons.book), label: 'Theory'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.workspace_premium_sharp), label: 'Reward')
+              icon: Icon(Icons.workspace_premium_sharp), label: 'Reward'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.support_agent), label: 'ChatGPT')
         ],
         currentIndex: selectedIndex,
         onTap: btnClick,
